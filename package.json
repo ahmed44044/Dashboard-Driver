@@ -41,7 +41,6 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://ahmed44044.github.io/Dashboard-Driver",
   "devDependencies": {
     "gh-pages": "^6.3.0"
   }

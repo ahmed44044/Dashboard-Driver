@@ -19,7 +19,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "publish": "git add . && git commit -m \"update\" && git push origin main && npm run deploy"
+
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +41,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://ahmed44044.github.io/Dashboard-Driver"
-  
+  "homepage": "https://ahmed44044.github.io/Dashboard-Driver",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }

@@ -5,7 +5,7 @@ export default function Footer() {
     <>
        <footer className="border-top bg-white py-3 mt-4">
         <div className="container text-center text-muted small">
-          Driver Scheduling Dashboard - Built with React
+          Driver Scheduling Dashboard - Built with React © 2025 Ahmed Mahmoud. All rights reserved.
         </div>
       </footer>
     </>

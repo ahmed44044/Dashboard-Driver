@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ahmed44044/Dashboard-Driver/static/css/main.1c1f88ed.css",
+    "main.js": "/ahmed44044/Dashboard-Driver/static/js/main.5c6f3f5b.js",
+    "static/js/453.1144f617.chunk.js": "/ahmed44044/Dashboard-Driver/static/js/453.1144f617.chunk.js",
+    "index.html": "/ahmed44044/Dashboard-Driver/index.html",
+    "main.1c1f88ed.css.map": "/ahmed44044/Dashboard-Driver/static/css/main.1c1f88ed.css.map",
+    "main.5c6f3f5b.js.map": "/ahmed44044/Dashboard-Driver/static/js/main.5c6f3f5b.js.map",
+    "453.1144f617.chunk.js.map": "/ahmed44044/Dashboard-Driver/static/js/453.1144f617.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1c1f88ed.css",
+    "static/js/main.5c6f3f5b.js"
+  ]
+}

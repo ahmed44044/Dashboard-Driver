@@ -2,9 +2,6 @@
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
   ],
-  "redirects": [
-    { "source": "/(.*)", "destination": "https://dashboard-driver.vercel.app/$1", "permanent": true }
-  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -17,3 +14,4 @@
     }
   ]
 }
+

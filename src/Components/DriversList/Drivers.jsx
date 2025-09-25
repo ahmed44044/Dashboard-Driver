@@ -3,7 +3,7 @@ import React from 'react'
 export default function Drivers({drivers,}) {
   return (
     <>
-     <div className="card border mb-4">
+     <div className="card border mb-4" style={{ maxHeight: '700px', overflowY: 'auto' }}>
   <div className="card-body">
     <h2 className="h5 mb-3">Drivers ({drivers.length})</h2>
     <div className="d-flex flex-column gap-3">

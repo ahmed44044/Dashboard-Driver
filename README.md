@@ -29,7 +29,7 @@ Live: https://dashboard-driver-a5pp3rh41-ahmed44044s-projects.vercel.app/
 ### Advanced Features
 - **📅 Calendar View**: Monthly calendar displaying driver availability and route assignments
 - **📈 Real-time Statistics**: Track assignment rates, available drivers, and route status
-- **🎨 Responsive Design**: Clean, professional interface with inline CSS styling
+- **🎨 Responsive Design**: Clean, professional interface with inline CSS styling and Bootstrap
 - **🔍 Visual Indicators**: Color-coded status badges for easy identification
 - **📱 Mobile Friendly**: Responsive grid layouts that work on all devices
 
@@ -50,10 +50,9 @@ Live: https://dashboard-driver-a5pp3rh41-ahmed44044s-projects.vercel.app/
 ## 🛠️ Tech Stack
 
 - **Frontend**: React 18+ with Hooks
-- **Styling**: Inline CSS with modern design patterns
+- **Styling**: Inline CSS with modern design patterns and Bootstrap
 - **State Management**: React useState for local state
-- **Data Storage**: Mock JSON data (in-memory)
-- **UI Components**: Custom components with reusable patterns
+- **Data Storage**:  JSON data (in-memory)
 - **Icons**: Emoji-based iconography
 - **Deployment**: Vercel-ready configuration
 

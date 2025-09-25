@@ -7,6 +7,9 @@ import Footer from './Components/Footer/Footer';
 import Dashboard from './Components/Dashboard/Dashboard';
 import Header from './Components/Header/Header';
 import Navbar from './Components/Navbar/Navbar';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Layout from './Components/Layout/Layout';
+import CalendarView from './Components/CalendarView/CalendarView';
 
 // Simple data structures
 const initialDrivers = [
@@ -88,10 +91,71 @@ const initialRoutes = [
     time: '4:30',
     driverId: null,
     status: 'unassigned'
+  },
+  {
+    id: 5,
+    name: 'Shopping Mall Express',
+    origin: 'Residential District',
+    destination: 'Westfield Mall',
+    date: '2025-01-28',
+    time: '11:00',
+    driverId: null,
+    status: 'unassigned'
+  },
+  {
+    id: 6,
+    name: 'University Shuttle',
+    origin: 'Downtown Terminal',
+    destination: 'State University',
+    date: '2025-01-29',
+    time: '06:45',
+    driverId: 3,
+    status: 'assigned'
+  },
+  {
+    id: 7,
+    name: 'Evening Commuter',
+    origin: 'Business Park',
+    destination: 'Train Station',
+    date: '2025-01-29',
+    time: '17:30',
+    driverId: null,
+    status: 'unassigned'
+  },
+  {
+    id: 8,
+    name: 'Weekend Recreation',
+    origin: 'Community Center',
+    destination: 'City Park',
+    date: '2025-02-01',
+    time: '10:00',
+    driverId: null,
+    status: 'unassigned'
+  },
+  {
+    id: 9,
+    name: 'Morning Corporate',
+    origin: 'Hotel District',
+    destination: 'Convention Center',
+    date: '2025-02-03',
+    time: '08:30',
+    driverId: 2,
+    status: 'assigned'
+  },
+  {
+    id: 10,
+    name: 'Afternoon Special',
+    origin: 'Library',
+    destination: 'Cultural Center',
+    date: '2025-10-25',
+    time: '13:15',
+    driverId: null,
+    status: 'unassigned'
   }
 ];
 
 export default function App() {
+
   const [drivers, setDrivers] = useState(initialDrivers);
   const [routes, setRoutes] = useState(initialRoutes);
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -143,20 +207,20 @@ export default function App() {
   const assignedRoutes = routes.filter(r => r.status === 'assigned').length;
   const unassignedRoutes = routes.filter(r => r.status === 'unassigned').length;
 
+
+    let routers=createBrowserRouter([
+    {path:'/',element:<Layout assignedRoutes={assignedRoutes} setActiveTab={setActiveTab} unassignedRoutes={unassignedRoutes} setDrivers={setDrivers} setRoutes={setRoutes} activeTab={activeTab} drivers={drivers} routes={routes} getDriverName={getDriverName} unassignDriver={unassignDriver} availableDrivers={availableDrivers} assignDriver={assignDriver}   />,children:[
+      {index:true,element:<Dashboard assignedRoutes={assignedRoutes} unassignedRoutes={unassignedRoutes} setDrivers={setDrivers} setRoutes={setRoutes} activeTab={activeTab} drivers={drivers} routes={routes} getDriverName={getDriverName} unassignDriver={unassignDriver} availableDrivers={availableDrivers} assignDriver={assignDriver}/>},
+      {path:'/calendar',element:<CalendarView routes={routes} drivers={drivers} assignedRoutes={assignedRoutes} unassignedRoutes={unassignedRoutes} availableDrivers={availableDrivers}/>},
+      {path:'/add-driver',element:<AddDriver drivers={drivers} setDrivers={setDrivers}/>},
+      {path:'/add-route',element:<AddRoute routes={routes} setRoutes={setRoutes}/>}
+    ]}
+  ])
+
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#f8f9fa' }}>
-      {/* Header */}
-  
-      <Header routes={routes} drivers={drivers} assignedRoutes={assignedRoutes} />
 
-      {/* Navigation */}
-   
-      <Navbar setActiveTab={setActiveTab} activeTab={activeTab}/>
-      {/* Main Content */}
-     <Dashboard assignedRoutes={assignedRoutes} unassignedRoutes={unassignedRoutes} setDrivers={setDrivers} setRoutes={setRoutes} activeTab={activeTab} drivers={drivers} routes={routes} getDriverName={getDriverName} unassignDriver={unassignDriver} availableDrivers={availableDrivers} assignDriver={assignDriver}/>
+    <RouterProvider router={routers}/>
+    
 
-      {/* Footer */}
-     <Footer/>
-    </div>
   );
 }

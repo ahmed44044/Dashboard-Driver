@@ -3,13 +3,13 @@ import RoutesList from '../RoutersList/RoutesList'
 import Drivers from '../DriversList/Drivers'
 import AddDriver from '../AddDriver/Adddriver'
 import AddRoute from '../AddRouter/AddRoute'
+import CalendarView from '../CalendarView/CalendarView'
 
 export default function Dashboard({assignedRoutes,unassignedRoutes,setDrivers,setRoutes,routes,getDriverName,unassignDriver,assignDriver,availableDrivers,drivers,activeTab}) {
   return (
     <>
      <main className="container py-4">
-  {/* Dashboard Tab */}
-  {activeTab === 'dashboard' && (
+ 
     <div>
       {/* Stats */}
       <div className="row mb-4 g-3">
@@ -71,17 +71,8 @@ export default function Dashboard({assignedRoutes,unassignedRoutes,setDrivers,se
         </div>
       </div>
     </div>
-  )}
-
-  {/* Add Driver Tab */}
-  {activeTab === 'add-driver' && (
-    <AddDriver drivers={drivers} setDrivers={setDrivers} />
-  )}
-
-  {/* Add Route Tab */}
-  {activeTab === 'add-route' && (
-    <AddRoute routes={routes} setRoutes={setRoutes} />
-  )}
+  
+  
 </main>
 
     </>
